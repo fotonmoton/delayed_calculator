@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "eslint-config-airbnb-base",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-return-assign": ["error", "except-parens"]
+  }
+}

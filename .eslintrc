@@ -13,6 +13,16 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-    "no-return-assign": ["error", "except-parens"]
+    "no-return-assign": ["error", "except-parens"],
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "off",
+    "import/extensions": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts"]
+      }
+    }
   }
 }

@@ -18,15 +18,17 @@
   },
   "dependencies": {
     "@koa/router": "^10.0.0",
+    "dotenv": "^8.2.0",
     "koa": "^2.13.1",
-    "koa-bodyparser": "^4.3.0"
+    "koa-bodyparser": "^4.3.0",
+    "slonik": "^23.6.2"
   },
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint ",
-    "go": "node dist/index.js",
-    "watch": "tsnd --respawn --transpile-only index.ts",
+    "lint": "eslint . --ext .ts",
+    "start_api": "node dist/api/index.js",
+    "watch_api": "tsnd --respawn --transpile-only api/index.ts",
     "prepare": "husky install"
   },
   "license": "UNLICENSED"

@@ -29,14 +29,23 @@ export const addRequest: AddRequest = async (
       calculator_requests (left_operand, right_operand, operator) 
     VALUES
       (${left}, ${right}, ${operator})
-    RETURNING *
+    RETURNING 
+      left_operand as left, 
+      right_operand as right, 
+      operator, 
+      id
   `)
   return result.rows[0] as StoredCalculateArgumants
 }
 
 export const getRequest: GetRequest = async (pool, id) => {
   const result = await pool.query<StoredCalculateArgumants>(sql`
-    SELECT * FROM 
+    SELECT 
+      left_operand as left, 
+      right_operand as right, 
+      operator,
+      id 
+    FROM 
       calculator_requests 
     WHERE 
       id = ${id}

@@ -6,7 +6,7 @@ import { connect } from '../db/connection'
 import { Context } from './context'
 import { calculatorRoutes } from './calculator'
 
-export const main = async (): Promise<Server> => {
+export const main = (): Server => {
   config()
   const app = new Koa<unknown, Context>()
 

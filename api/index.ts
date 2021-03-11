@@ -1,3 +1,3 @@
-import { main } from './root'
+import { main } from './main'
 
 main()

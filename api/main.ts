@@ -8,11 +8,11 @@ import { calculatorRoutes } from './calculator'
 
 export const main = (): Server => {
   config()
+  const dbPool = connect()
   const app = new Koa<unknown, Context>()
 
-  app.context.dbPool = connect()
+  app.context.dbPool = dbPool
   app.use(bodyParser())
   app.use(calculatorRoutes.routes())
-  console.log(`listening on ${process.env.API_PORT}`)
   return app.listen(process.env.API_PORT)
 }

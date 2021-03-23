@@ -31,6 +31,7 @@
   "scripts": {
     "watch_test": "ava --watch",
     "test": "ava",
+    "test_db": "ava test/db/*",
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts",
